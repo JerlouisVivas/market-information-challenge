@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "17e3747a-d873-48d7-bff9-24ff4cb5ce40",
+		"name": "Market Information Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Juan\",\r\n    \"lastName\":\"Jimenez\",\r\n    \"email\":\"mail@mail\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "8b4513d9-f2c0-4e08-9eb6-329f04f52c58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/stock/market/query?symbol=GOOGL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stock",
+						"market",
+						"query"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "GOOGL"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
